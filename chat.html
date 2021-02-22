@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/chat.css">
+	<title>CHAT</title>
+  <!-- Need this for footer buttons -->
+  <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script> 
+  <!-- Font Awesome stuff -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Google Font for the page -->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,400" rel="stylesheet">
+
+  <!-- Splide JS & CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/css/splide.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+
+    <!-- Splide JS & CSS for banner -->
+  <script>
+    document.addEventListener( 'DOMContentLoaded', function () {
+      new Splide( '#image-slider' ).mount();
+    } );
+  </script>
+
+    <!-- Splide JS & CSS for events -->
+  <script>
+    document.addEventListener( 'DOMContentLoaded', function () {
+	new Splide( '#card-slider', {
+		perPage    : 3,
+		breakpoints: {
+			600: {
+				perPage: 1,
+			}
+		}
+	} ).mount();
+} );
+  </script>
+  
+
+
+</head>
+<body>
+  <div class="container">
+
+    <!-- old nav starts -->
+    <div class="nav">
+      <ul>
+        <li class="menu-item"><a href="chat.html">即時聊天</a></li>
+        <li class="menu-item"><a href="#">主題約會</a></li>
+        <li class="menu-item"><a href="#">戀愛企劃</a></li>
+        <li class="menu-item"><a href="index.html"><img src="img/logo-nav.png" alt=""></a></li>
+        <li class="menu-item"><a href="#">深層配對</a></li>
+        <li class="menu-item"><a href="#">人格測驗</a></li>
+        <li class="menu-item"><a href="#">關於我們</a></li>
+        <li class="user"><a href="#"><img src="img/user.png" alt=""></a></li>
+        <li class="user login"><a href="#">登入</a></li>
+      </ul>
+    </div>
+    <!-- old nav ends -->
+
+  <div class="chat-main">
+    <div class="block1">
+          <!-- Sign up form -->
+          <div class="form-structor">
+
+            <div class="signup">
+              
+              <h2 class="form-title" id="signup"><span>或是</span>註冊申請</h2>
+              <div class="form-holder">
+                <input type="text" class="input" placeholder="Name" />
+                <input type="email" class="input" placeholder="Email" />
+                <input type="password" class="input" placeholder="Password" />
+              </div>
+              <button class="submit-btn">Sign up</button>
+            </div>
+            <div class="login slide-up">
+              <div class="center">
+                <h2 class="form-title" id="login"><span>或是</span>登入會員</h2>
+                <div class="form-holder">
+                  <input type="email" class="input" placeholder="Email" />
+                  <input type="password" class="input" placeholder="Password" />
+                </div>
+                <button class="submit-btn">Log in</button>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <div class="chat-block1">
+      <h3>選擇聊天對象</h3>
+      <h4>目前線上有三位使用者。趕快跟他們聊聊吧!</h4>
+
+        
+
+    </div>
+    
+    <div class="chat-wrapper">
+
+      <!-- Nike 19 -->
+      <div class="card card--19">
+        <div class="card__header card__header--19">
+          <div class="card__watermark" data-watermark="ESFP 93%"></div>
+          <img src="img/chat/girl.png" alt="Nike" class="card__logo card__will-animate">
+
+          <span class="card__price card__will-animate">23, 女</span>
+
+          <h1 class="card__title card__will-animate">↖★寧波多野結衣☆↘</h1>
+          <span class="card__subtitle card__will-animate">狼若回頭，不是報恩，就是報仇。<br><br>既然已經傷害了過去，就不要辜負了未來。<br>有時候並不是真的原諒了，只是不願意失去。</span>
+
+        </div>
+
+        <div class="card__body">
+          <img src="img/chat/1.png" alt="Nike 19" class="card__image card__will-animate">
+          <div class="card__wish-list card__wish-list--19 card__will-animate"><a href="chat-girl.html">跟她聊天</a></div>
+
+          <span class="card__category card__will-animate">Jiangzicui (距離你13.2公里)</span>
+        </div>
+      </div>
+
+      <!-- Nike Solstice -->
+      <div class="card card--solstice">
+        <div class="card__header card__header--solstice">
+          <div class="card__watermark" data-watermark="ESTP 85%"></div>
+
+          <img src="img/chat/boy.png" alt="Nike" class="card__logo card__will-animate">
+
+          <span class="card__price card__will-animate">28, 男</span>
+
+          <h1 class="card__title card__will-animate">大坪林書豪</h1>
+          <span class="card__subtitle card__will-animate">「喜歡你  暖暖的文字，洋溢著  滿滿的  幸福。」<br><br>要不要來我家看我家的貓後空翻? 要看我後空翻也可以啦! :P</span>
+
+        </div>
+
+        <div class="card__body">
+          <img src="img/chat/2.png" alt="Nike Solstice" class="card__image card__will-animate">
+          <div class="card__wish-list card__wish-list--solstice card__will-animate"><a href="#">
+            跟他聊天</a></div>
+
+          <span class="card__category card__will-animate">Da'an (距離你8.5公里)</span>
+        </div>
+      </div>
+
+      <!-- Nike Huarache -->
+      <div class="card card--huarache">
+        <div class="card__header card__header--huarache">
+          <div class="card__watermark" data-watermark="ESFJ 72%"></div>
+
+          <img src="img/chat/girl.png" alt="Nike" class="card__logo card__will-animate">
+
+          <span class="card__price card__will-animate">28, 女</span>
+
+          <h1 class="card__title card__will-animate">台東池上戶彩</h1>
+          <span class="card__subtitle card__will-animate">No pen no gan. Work hard, play harder. <br><br>我有故事，你有酒嗎? <br>NO FWB, ONS, ADSL, HTTP.</span>
+
+        </div>
+
+        <div class="card__body">
+          <img src="img/chat/3.png" alt="Nike Huarache" class="card__image card__will-animate">
+          <div class="card__wish-list card__wish-list--solstice card__will-animate"><a href="#">跟她聊天</a></div>
+
+          <span class="card__category card__will-animate">Taitung (距離你242.4公里)</span>
+        </div>
+      </div>
+
+
+    </div> <!-- /wrapper -->
+
+    <div class="cards-placeholder">
+      <div class="cards-placeholder__item"></div>
+      <div class="cards-placeholder__item"></div>
+      <div class="cards-placeholder__item"></div>
+    </div>
+  
+
+  <div class="block11">
+    <h3>幸福，從今天開始</h3>
+    <div class="block11-content">
+      <h4>從此不再一個人...</h4>
+    <img src="img/block9j.png" alt="">
+    <a href="#">你的幸褔就從今天開始 GO!<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+  </div>
+
+
+<!-- Start of footer -->
+  <div class="footer">
+    <img src="img/footer.png" alt="">
+  <div class="boxRow">
+    <a class="btn btn_v1" href="#">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a class="btn btn_v2" href="#">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a class="btn btn_v3" href="#">
+      <i class="fab fa-youtube"></i>
+    </a>
+    
+  </div>
+    
+
+<!-- Footer contact -->
+    <span class=footer-contact>
+    <p>
+      Copyright © 2021 TWINKO LTD. All rights reserved.<br>
+TWINKO LTD., PART OF VMBC LTD., IS THE BRAINCHILD Of DAVID HSU, ESQ. <br>
+THIS WEBSITE FOR DEMONSTRATION PURPOSES ONLY. NAMES, CHARACTERS, BUSINESSES, PLACES, EVENTS, LOCALES, AND INCIDENTS ARE EITHER THE PRODUCTS OF THE AUTHOR'S IMAGINATION OR USED IN A FICTITIOUS MANNER. ANY RESEMBLANCE TO ACTUAL PERSONS, LIVING OR DEAD, OR ACTUAL EVENTS IS PURELY COINCIDENTAL.
+    </p>
+  </div>
+</div>
+
+<!-- Signup Form -->
+<script>
+
+const loginBtn = document.getElementById('login');
+const signupBtn = document.getElementById('signup');
+
+loginBtn.addEventListener('click', (e) => {
+	let parent = e.target.parentNode.parentNode;
+	Array.from(e.target.parentNode.parentNode.classList).find((element) => {
+		if(element !== "slide-up") {
+			parent.classList.add('slide-up')
+		}else{
+			signupBtn.parentNode.classList.add('slide-up')
+			parent.classList.remove('slide-up')
+		}
+	});
+});
+
+signupBtn.addEventListener('click', (e) => {
+	let parent = e.target.parentNode;
+	Array.from(e.target.parentNode.classList).find((element) => {
+		if(element !== "slide-up") {
+			parent.classList.add('slide-up')
+		}else{
+			loginBtn.parentNode.parentNode.classList.add('slide-up')
+			parent.classList.remove('slide-up')
+		}
+	});
+});
+</script>
+
+<script  src="/js/chat.js"></script>
+
+
+</body>
+</html>
