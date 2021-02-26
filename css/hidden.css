@@ -1,0 +1,81 @@
+/* Google font for neon sign */
+@import url(//fonts.googleapis.com/css?family=Vibur);
+
+*{
+  /* outline: 1px solid pink; */
+}
+
+
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  
+    font-family: "Roboto", "Helvetica", sans-serif;
+  
+    transition: background-color 0.2s;
+    will-change: background-color;
+  }
+
+/* .about-us-main {
+	background-image: url(../img/about-us-bg1.png);
+	background-repeat: no-repeat;
+}	 */
+
+.hidden-main{
+  background-image: url(../img/fbi-warning.png);
+  background-repeat: no-repeat;
+}
+
+.hidden-container {
+  margin: 0 auto;
+  /* text-align: center; */
+
+}
+
+#slider{
+  display: none;
+}
+
+#slider img{
+  max-width: 100%;
+}
+
+.center {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* height: 200px; */
+  /* border: 3px solid green;  */
+  margin-bottom: 30px;
+}
+
+.center button{
+  padding: 15px 15px;
+  margin-bottom: 20px;
+  /* font-size: 20px; */
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  /* background-color: #8B81C3; */
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 7px #999;
+}
+
+
+.center button:hover{
+  background-color:#887ec9;
+  color: white;
+}
+
+.center button:active{
+	color:  #EE62B3;
+  background-color:#6758be
+box-shadow: 0 5px #666;
+transform: translateY(5px);
+}

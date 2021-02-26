@@ -1,0 +1,50 @@
+*{
+  /* outline: 1px solid pink; */
+}
+
+
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  
+    font-family: "Roboto", "Helvetica", sans-serif;
+  
+    transition: background-color 0.2s;
+    will-change: background-color;
+  }
+
+.about-us-main {
+	/* grid-area: main;  */
+	background-image: url(../img/about-us-bg1.png);
+	background-repeat: no-repeat;
+}	
+
+
+
+.event-block1 li{
+  display: inline-block;
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 50px;
+}
+
+.event-block1 a{
+  background-color:white;
+}
+
+.event-block1 a:hover{
+  background-color: pink;
+}
+
+.event-block1 {
+  /* margin: 0 auto; */
+  text-align: center;
+}
+
+.event-block1 h4{
+line-height: 2;
+}

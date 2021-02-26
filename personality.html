@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <!-- <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/> -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/personality.css">
+
+
+  <!-- MBTI stuff -->
+  <script>history.scrollRestoration = "manual"</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   -->
+  <title>Event</title>
+  <!-- Need this for footer buttons -->
+  <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"
+    integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0"
+    crossorigin="anonymous"></script>
+  <!-- Font Awesome stuff -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Google Font for the page -->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,400" rel="stylesheet">
+
+  <!-- Splide JS & CSS
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/css/splide.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script> -->
+
+
+
+  <!-- Splide JS & CSS for events -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Splide('#card-slider', {
+        perPage: 3,
+        breakpoints: {
+          600: {
+            perPage: 1,
+          }
+        }
+      }).mount();
+    });
+  </script>
+
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- old nav starts -->
+    <div class="nav">
+      <ul>
+        <li class="menu-item"><a href="chat.html">即時聊天</a></li>
+        <li class="menu-item"><a href="event.html">主題約會</a></li>
+        <li class="menu-item"><a href="seminar.html">戀愛企劃</a></li>
+        <li class="menu-item"><a href="index.html"><img src="img/logo-nav.png" alt=""></a></li>
+        <li class="menu-item"><a href="match.html">每日配對</a></li>
+        <li class="menu-item current-page"><a href="personality.html">人格測驗</a></li>
+        <!-- <li class="menu-item"><a href="about-us.html">關於(舊)</a></li> -->
+        <li class="menu-item">
+          <div class="dropdown">
+            <button class="dropbtn">關於我們
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="about-us.html">關於我們</a>
+              <a href="testimonial.html">客戶見證</a>
+              <a href="#">聯絡我們</a>
+            </div>
+        </li>
+        <li class="user"><a href="#"><img src="img/user.png" alt=""></a></li>
+        <li class="user login"><a href="login.html">登入</a></li>
+      </ul>
+    </div>
+    <!-- old nav ends -->
+
+    <div class="personality-main">
+      <div class="block1">
+        <!-- Sign up form -->
+        <div class="form-structor">
+
+          <div class="signup">
+
+            <h2 class="form-title" id="signup"><span>或是</span>註冊申請</h2>
+            <div class="form-holder">
+              <input type="text" class="input" placeholder="Name" />
+              <input type="email" class="input" placeholder="Email" />
+              <input type="password" class="input" placeholder="Password" />
+            </div>
+            <button class="submit-btn">Sign up</button>
+          </div>
+          <div class="login slide-up">
+            <div class="center">
+              <h2 class="form-title" id="login"><span>或是</span>登入會員</h2>
+              <div class="form-holder">
+                <input type="email" class="input" placeholder="Email" />
+                <input type="password" class="input" placeholder="Password" />
+              </div>
+              <button class="submit-btn">Log in</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="personality-block1">
+        <h3>美國兩千三百萬人都在做的心理測驗</h3>
+        <h4>了解自己更了解另一半。我們每個人都是不同的個體。</h4>
+      </div>
+
+
+
+
+      <form class="test-container">
+        <div class="title">
+          <a href="#info" type="button" id="moreInfo" class="btn btn-sm btn-secondary active">了解更多...</a>
+          <!--a href="#links" type="button" id="refLinks" class="btn btn-sm btn-secondary">reference links</a-->
+          <p><strong>選擇最適合你的敘述</strong> </p>
+          <p><strong>我是...???</strong> </p>
+          <hr>
+          <div class="form-group">
+            <div class="row input-group">
+              <label for="v1" class="col-1 control-label text-right">1</label>
+              <div id="radioBtn" class="btn-group flex-wrap">
+                <a class="col-xs-auto btn btn-secondary btn-sm active" data-toggle="v1" data-title="e">消耗能量，享受團體的時間</a>
+                <a class="col-xs-auto btn btn-secondary btn-sm notActive" data-toggle="v1"
+                  data-title="i">養護能量，享受一對一的時間。</a>
+              </div>
+              <input type="hidden" name="v1" id="v1" value="e">
+            </div>
+            <div class="row input-group">
+              <label for="v2" class="col-1 control-label text-right">2</label>
+              <div id="radioBtn" class="btn-group flex-wrap">
+                <a class="btn btn-secondary btn-sm active" data-toggle="v2" data-title="s">一板一眼</a>
+                <a class="btn btn-secondary btn-sm notActive" data-toggle="v2" data-title="n">尋找含義和可能性。</a>
+              </div>
+              <input type="hidden" name="v2" id="v2" value="s">
+            </div>
+            <div class="row input-group">
+              <label for="v3" class="col-1 control-label text-right">3</label>
+              <div id="radioBtn" class="btn-group flex-wrap">
+                <a class="btn btn-secondary btn-sm active" data-toggle="v3" data-title="t">邏輯，思考，質疑。</a>
+                <a class="btn btn-secondary btn-sm notActive" data-toggle="v3" data-title="f">善解人意，有感情，包容。</a>
+              </div>
+              <input type="hidden" name="v3" id="v3" value="t">
+            </div>
+            <div class="row input-group">
+              <label for="v4" class="col-1 control-label text-right">4</label>
+              <div id="radioBtn" class="btn-group flex-wrap">
+                <a class="btn btn-secondary btn-sm active" data-toggle="v4" data-title="j">井井有條</a>
+                <a class="btn btn-secondary btn-sm notActive" data-toggle="v4" data-title="p">靈活，適應性強。</a>
+              </div>
+              <input type="hidden" name="v4" id="v4" value="j">
+            </div>
+            <div class="row input-group">
+              <label for="v5" class="col-1 control-label text-right">5</label>
+              <div id="radioBtn" class="btn-group flex-wrap">
+                <a class="btn btn-secondary btn-sm active" data-toggle="v5" data-title="e">更外向，想出聲來。</a>
+                <a class="btn btn-secondary btn-sm notActive" data-toggle="v5" data-title="i">更加保留，多想一想。 </a>
+              </div>
+              <input type="hidden" name="v5" id="v5" value="e">
+            </div>
+            <div class="row input-group">
+              <label for="v6" class="col-1 control-label text-right">6</label>
+              <div id="radioBtn" class="btn-group flex-wrap">
+                <a class="btn btn-secondary btn-sm active" data-toggle="v6" data-title="s"> 務實，現實，經驗豐富。</a>
+                <a class="btn btn-secondary btn-sm notActive" data-toggle="v6" data-title="n">富有想像力，創新，理論。</a>
+              </div>
+              <input type="hidden" name="v6" id="v6" value="s">
+            </div>
+            <div class="row input-group">
+              <label for="v7" class="col-1 control-label text-right">7</label>
+              <div id="radioBtn" class="btn-group flex-wrap">
+                <a class="btn btn-secondary btn-sm active" data-toggle="v7" data-title="t">坦率，直率，直接</a>
+                <a class="btn btn-secondary btn-sm notActive" data-toggle="v7" data-title="f">機智，友善，令人鼓舞。</a>
+              </div>
+              <input type="hidden" name="v7" id="v7" value="t">
+            </div>
+            <div class="row input-group">
+              <label for="v8" class="col-1 control-label text-right">8</label>
+              <div id="radioBtn" class="btn-group flex-wrap">
+                <a class="btn btn-secondary btn-sm active" data-toggle="v8" data-title="j">喜歡做計劃，排時間表。</a>
+                <a class="btn btn-secondary btn-sm notActive" data-toggle="v8" data-title="p">喜歡計劃外的，自發的。
+                </a>
+              </div>
+              <input type="hidden" name="v8" id="v8" value="j">
+            </div>
+            <div class="row input-group">
+              <label for="v9" class="col-1 control-label text-right">9 </label>
+              <div id="radioBtn" class="btn-group flex-wrap">
+                <a class="btn btn-secondary btn-sm active" data-toggle="v9" data-title="e">尋求許多活動，公共活動以及與他人的互動。</a>
+                <a class="btn btn-secondary btn-sm notActive" data-toggle="v9" data-title="i">尋求安靜的私人，獨立活動。
+                </a>
+              </div>
+              <input type="hidden" name="v9" id="v9" value="e">
+            </div>
+            <div class="row input-group">
+              <label for="v10" class="col-1 control-label text-right">10</label>
+              <div id="radioBtn" class="btn-group flex-wrap">
+                <a class="btn btn-secondary btn-sm active" data-toggle="v10" data-title="s"> 標準，常規，常規。</a>
+                <a class="btn btn-secondary btn-sm notActive" data-toggle="v10" data-title="n">不同，新穎，獨特。</a>
+              </div>
+              <input type="hidden" name="v10" id="v10" value="s">
+            </div>
+            <div class="row input-group">
+              <label for="v11" class="col-1 control-label text-right">11</label>
+              <div id="radioBtn" class="btn-group flex-wrap">
+                <a class="btn btn-secondary btn-sm active" data-toggle="v11" data-title="t">堅定，傾向於批評，保持一致性。</a>
+                <a class="btn btn-secondary btn-sm notActive" data-toggle="v11" data-title="f">溫柔，傾向於讚賞，專心與和解。</a>
+              </div>
+              <input type="hidden" name="v11" id="v11" value="t">
+            </div>
+            <div class="row input-group">
+              <label for="v12" class="col-1 control-label text-right">12</label>
+              <div id="radioBtn" class="btn-group flex-wrap">
+                <a class="btn btn-secondary btn-sm active" data-toggle="v12" data-title="j">監管，層次分明。</a>
+                <a class="btn btn-secondary btn-sm notActive" data-toggle="v12" data-title="p">隨和，“活著”，“讓別人活”。</a>
+              </div>
+              <input type="hidden" name="v12" id="v12" value="j">
+            </div>
+            <div class="row input-group">
+              <label for="v13" class="col-1 control-label text-right">13</label>
+              <div id="radioBtn" class="btn-group flex-wrap">
+                <a class="btn btn-secondary btn-sm active" data-toggle="v13" data-title="e">外部，善於溝通，表達自己的想法。</a>
+                <a class="btn btn-secondary btn-sm notActive" data-toggle="v13" data-title="i">內部，寡言，保留給自己。</a>
+              </div>
+              <input type="hidden" name="v13" id="v13" value="e">
+            </div>
+            <div class="row input-group">
+              <label for="v14" class="col-1 control-label text-right">14</label>
+              <div id="radioBtn" class="btn-group flex-wrap">
+                <a class="btn btn-secondary btn-sm active" data-toggle="v14" data-title="s">關注在現在</a>
+                <a class="btn btn-secondary btn-sm notActive" data-toggle="v14" data-title="n">展望未來，全面性，看，“大局”。</a>
+              </div>
+              <input type="hidden" name="v14" id="v14" value="s">
+            </div>
+            <div class="row input-group">
+              <label for="v15" class="col-1 control-label text-right">15</label>
+              <div id="radioBtn" class="btn-group flex-wrap">
+                <a class="btn btn-secondary btn-sm active" data-toggle="v15" data-title="t">意志堅強，公正。</a>
+                <a class="btn btn-secondary btn-sm notActive" data-toggle="v15" data-title="f">多情的，仁慈的。</a>
+              </div>
+              <input type="hidden" name="v15" id="v15" value="t">
+            </div>
+            <div class="row input-group">
+              <label for="v16" class="col-1 control-label text-right">16</label>
+              <div id="radioBtn" class="btn-group flex-wrap">
+                <a class="btn btn-secondary btn-sm active" data-toggle="v16" data-title="j">準備，提前計劃。</a>
+                <a class="btn btn-secondary btn-sm notActive" data-toggle="v16" data-title="p">順勢而為，隨心所欲。</a>
+              </div>
+              <input type="hidden" name="v16" id="v16" value="j">
+            </div>
+            <div class="row input-group">
+              <label for="v17" class="col-1 control-label text-right">17</label>
+              <div id="radioBtn" class="btn-group flex-wrap">
+                <a class="btn btn-secondary btn-sm active" data-toggle="v17" data-title="e">主動，蓄勢待發</a>
+                <a class="btn btn-secondary btn-sm notActive" data-toggle="v17" data-title="i">反司，經過深思熟慮的。</a>
+              </div>
+              <input type="hidden" name="v17" id="v17" value="e">
+            </div>
+            <div class="row input-group">
+              <label for="v18" class="col-1 control-label text-right">18</label>
+              <div id="radioBtn" class="btn-group flex-wrap">
+                <a class="btn btn-secondary btn-sm active" data-toggle="v18" data-title="s">事實的事情，“是什麼”。</a>
+                <a class="btn btn-secondary btn-sm notActive" data-toggle="v18" data-title="n">想法，夢想，“可能是什麼”，哲學上。</a>
+              </div>
+              <input type="hidden" name="v18" id="v18" value="s">
+            </div>
+            <div class="row input-group">
+              <label for="v19" class="col-1 control-label text-right">19</label>
+              <div id="radioBtn" class="btn-group flex-wrap">
+                <a class="btn btn-secondary btn-sm active" data-toggle="v19" data-title="t">事實上，以問題為導向。</a>
+                <a class="btn btn-secondary btn-sm notActive" data-toggle="v19" data-title="f">敏感，以人為本，富有同情心。</a>
+              </div>
+              <input type="hidden" name="v19" id="v19" value="t">
+            </div>
+            <div class="row input-group">
+              <label for="v20" class="col-1 control-label text-right">20</label>
+              <div id="radioBtn" class="btn-group flex-wrap">
+                <a class="btn btn-secondary btn-sm active" data-toggle="v20" data-title="j">控制，支配。</a>
+                <a class="btn btn-secondary btn-sm notActive" data-toggle="v20" data-title="p">緯度，自由。 </a>
+              </div>
+              <input type="hidden" name="v20" id="v20" value="j">
+            </div>
+          </div>
+
+          <button id="submit">看我的結果</button>
+        </div>
+      </form>
+      <div class="results">
+        <div id="waarden">
+          <p>根據MYERS-BRIGGS Tpe Indicator (MBTI), 你的人格特質是 :</p>
+          <h2 id="res">
+            <!--Hier komt de uitslag-->
+          </h2>
+          <h3>屬性分配:</h3>
+          <ul>
+            <!--Hier komen de values uit de uitslag-->
+            <li id="IE"></li>
+            <li id="SN"></li>
+            <li id="TF"></li>
+            <li id="JP"></li>
+          </ul>
+          <h3>解釋</h3>
+          <p id="overzicht">
+            <!--Hier komt de omschrijving van de personlijkheidstype -->
+          </p>
+        </div>
+        <!-- uitleg over deze test -->
+        <div id="info">
+          <h3>MBTI背景介紹</h3>
+          <ul>
+            <li>
+              <p>Myers-Briggs（MBTI）的原始思想是由卡爾·古斯塔夫·榮格（Carl Gustav Jung）在1921年提出的。</p>
+            </li>
+            <li>
+              <p>實際測試於1962年正式發布。該測試的創建是為了幫助確定在第二次世界大戰期間首次進入職場的女性最適合的職業。</p>
+            </li>
+            <li>
+              <p>這是一項心理分析檢查，可確定一個人的心理構成以及他們如何看待和做出決定。
+            </li>
+            <li>
+              <p>該測試由四種不同的二分法或性格描述組成。 一個人可以是：</p>
+              <ol>
+                <li>
+                  <p>內向 或 外向</p>
+                </li>
+                <li>
+                  <p>實感 或 直覺</p>
+                </li>
+                <li>
+                  <p>理性 或 感性</p>
+                </li>
+                <li>
+                  <p>感知 或 判斷</p>
+                </li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Start of the end-of-page block -->
+      <div class="block11">
+        <h3>幸福，從今天開始</h3>
+        <div class="block11-content">
+          <h4>從此不再一個人...</h4>
+          <img src="img/block9j.png" alt="">
+          <a class="purple-btn" href="login.html">你的幸褔就從今天開始 GO!<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <!-- End of the end-of-page block -->
+
+      <!-- Start of footer -->
+      <!-- Start of Footer Buttons -->
+      <div class="footer">
+        <img src="img/footer.png" alt="">
+        <div class="boxRow">
+          <a class="button btn_v1" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a class="button btn_v2" href="https://www.youtube.com/watch?v=989-7xsRLR4&t=0m36s">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a class="button btn_v3" href="https://www.youtube.com/watch?v=072tU1tamd0">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+        <!-- End of Footer Buttons -->
+
+        <!-- Footer contact -->
+        <span class=footer-contact>
+          <p>
+            Copyright © 2021 TWINKO LTD. All rights reserved.<br>
+            TWINKO LTD., PART OF VMBC LTD., IS THE BRAINCHILD Of DAVID HSU, ESQ. <br>
+            THIS WEBSITE FOR DEMONSTRATION PURPOSES ONLY. NAMES, CHARACTERS, BUSINESSES, PLACES, EVENTS, LOCALES, AND
+            INCIDENTS ARE EITHER THE PRODUCTS OF THE AUTHOR'S IMAGINATION OR USED IN A FICTITIOUS MANNER. ANY
+            RESEMBLANCE TO ACTUAL PERSONS, LIVING OR DEAD, OR ACTUAL EVENTS IS PURELY COINCIDENTAL.
+          </p>
+      </div>
+    </div>
+
+    <!-- Signup Form -->
+    <script>
+
+      const loginBtn = document.getElementById('login');
+      const signupBtn = document.getElementById('signup');
+
+      loginBtn.addEventListener('click', (e) => {
+        let parent = e.target.parentNode.parentNode;
+        Array.from(e.target.parentNode.parentNode.classList).find((element) => {
+          if (element !== "slide-up") {
+            parent.classList.add('slide-up')
+          } else {
+            signupBtn.parentNode.classList.add('slide-up')
+            parent.classList.remove('slide-up')
+          }
+        });
+      });
+
+      signupBtn.addEventListener('click', (e) => {
+        let parent = e.target.parentNode;
+        Array.from(e.target.parentNode.classList).find((element) => {
+          if (element !== "slide-up") {
+            parent.classList.add('slide-up')
+          } else {
+            loginBtn.parentNode.parentNode.classList.add('slide-up')
+            parent.classList.remove('slide-up')
+          }
+        });
+      });
+    </script>
+
+    <!-- <script type="text/javascript" src="js/materialize.js"></script>
+<script  src="js/event.js"></script> -->
+
+    <script src="js/mbti.js"></script>
+
+
+    <!-- Scroll button -->
+    <button onclick="topFunction()" id="scrollbtn" title="Go to top"><img src="img/top.png" alt=""></button>
+
+    <script>
+      //Get the button
+      var mybutton = document.getElementById("scrollbtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () { scrollFunction() };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+
+    <!-- Resize alert! LOL! -->
+    <script>
+      window.addEventListener("resize", function () {
+        alert("不要亂調Window喔，就跟你說我們還不會用RWD!!!");
+      });
+    </script>
+
+</body>
+
+</html>

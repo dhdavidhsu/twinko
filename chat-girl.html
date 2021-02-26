@@ -1,46 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
   <link rel="stylesheet" href="css/chat-girl.css">
-	<title>TEMPLATE</title>
+  <title>TEMPLATE</title>
   <!-- Need this for footer buttons -->
-  <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script> 
+  <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"
+    integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0"
+    crossorigin="anonymous"></script>
   <!-- Font Awesome stuff -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Google Font for the page -->
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,400" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.min.css">
 
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
 
 
 
 </head>
+
 <body>
   <div class="container">
 
     <!-- old nav starts -->
     <div class="nav">
       <ul>
-        <li class="menu-item"><a href="chat.html">即時聊天</a></li>
-        <li class="menu-item"><a href="#">主題約會</a></li>
-        <li class="menu-item"><a href="#">戀愛企劃</a></li>
+        <li class="menu-item current-page"><a href="chat.html">即時聊天</a></li>
+        <li class="menu-item"><a href="event.html">主題約會</a></li>
+        <li class="menu-item"><a href="seminar.html">戀愛企劃</a></li>
         <li class="menu-item"><a href="index.html"><img src="img/logo-nav.png" alt=""></a></li>
-        <li class="menu-item"><a href="#">深層配對</a></li>
-        <li class="menu-item"><a href="#">人格測驗</a></li>
-        <li class="menu-item"><a href="#">關於我們</a></li>
+        <li class="menu-item"><a href="match.html">每日配對</a></li>
+        <li class="menu-item"><a href="personality.html">人格測驗</a></li>
+        <!-- <li class="menu-item"><a href="about-us.html">關於(舊)</a></li> -->
+        <li class="menu-item">
+          <div class="dropdown">
+            <button class="dropbtn">關於我們
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="about-us.html">關於我們</a>
+              <a href="testimonial.html">客戶見證</a>
+              <a href="#">聯絡我們</a>
+            </div>
+        </li>
         <li class="user"><a href="#"><img src="img/user.png" alt=""></a></li>
-        <li class="user login"><a href="#">登入</a></li>
+        <li class="user login"><a href="login.html">登入</a></li>
       </ul>
     </div>
     <!-- old nav ends -->
 
 
-  <div class="block11">
+    <div class="block11">
 
-    <!-- <div class="gallery">
+      <button id="show-chat-button" onclick="show('mychat')">SHOW CHAT</button>
+      <!-- <div class="gallery">
       <div id="image-slider" class="splide">
         <div class="splide__track">
           <ul class="splide__list">
@@ -59,136 +77,152 @@
     </div> -->
 
 
-    <!-- partial:index.partial.html -->
-<div class="swiper-container">
-  <div class="bg"></div>
-  <div class="bg bg2"></div>
-  <div class="bg bg3"></div>
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">
-      <div class="item">
-          <img src="https://cdn-images-1.medium.com/max/800/0*oGBtjYlPplnySOLb.jpg" alt="">
+      <!-- partial:index.partial.html -->
+      <div class="swiper-container">
+        <div class="bg"></div>
+        <div class="bg bg2"></div>
+        <div class="bg bg3"></div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="item">
+              <img src="img/chat/chat-girl2.png" alt="">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="item">
+              <img src="img/chat/chat-girl1.png" alt="">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="item">
+              <img src="img/chat/chat-girl3.png" alt="">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="item">
+              <img src="img/chat/chat-girl4.png" alt="">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="item">
+              <img src="img/chat/chat-girl5.png" alt="">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="item">
+              <img src="img/chat/chat-girl6.png" alt="">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="item">
+              <img src="img/chat/chat-girl7.png" alt="">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="item">
+              <img src="img/chat/chat-girl8.png" alt="">
+
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+
+
+
+
+        <!--<div class="bg"></div>-->
+        <!-- partial -->
+
       </div>
-    </div>
-    <div class="swiper-slide">
-        <div class="item">
-            <img src="https://cdn-images-1.medium.com/max/800/0*5waL92vewy2vZ2Fl.jpg" alt="">
+
+      <section class="avenue-messenger" id="mychat">
+        <div class="chat-menu">
+          <div class="items"><span>
+              <a href="#" title="縮小視窗" onclick="hide('mychat')">&mdash;</a><br>
+              <!--     
+     <a href="">enter email</a><br>
+     <a href="">email transcript</a><br>-->
+              <a href="#" title="小心! 按下按鈕將會關閉視窗!" onclick="confirmQuit()">&#10005;</a>
+
+            </span></div>
+          <div class="button">...</div>
+        </div>
+        <div class="agent-face">
+          <div class="half">
+            <img class="agent circle" src="img/chat/avatar-girl.png" alt="Jane Ho">
+          </div>
+        </div>
+        <div class="chat">
+          <div class="chat-title">
+            <h1>Jane Ho</h1>
+            <h2>念我的名字時請注意發音!</h2>
+            <!--  <figure class="avatar">
+      <img src="http://askavenue.com/img/17.jpg" /></figure>-->
+          </div>
+          <div class="messages">
+            <div class="messages-content"></div>
+          </div>
+          <div class="message-box">
+            <textarea type="text" class="message-input" placeholder="Type message..."></textarea>
+            <button type="submit" class="message-submit">Send</button>
+          </div>
         </div>
     </div>
-    <div class="swiper-slide">
-        <div class="item">
-            <img src="https://cdn-images-1.medium.com/max/800/0*nfvw6jZFiAHArVnK.jpg" alt="">
-        </div>
-    </div>
-    <div class="swiper-slide">
-        <div class="item">
-            <img src="https://cdn-images-1.medium.com/max/1200/0*HN__HbbhFV9h_-w8.jpg" alt="">
-        </div>
-    </div>
-    <div class="swiper-slide">
-        <div class="item">
-            <img src="https://cdn-images-1.medium.com/max/800/0*MhnAbwreIz-aMs8Q.jpg" alt="">
-        </div>
-    </div>
-    <div class="swiper-slide">
-        <div class="item">
-            <img src="https://cdn-images-1.medium.com/max/400/0*dcr0FFlK8BopY4ap.jpg" alt="">
-        </div>
-    </div>
-    <div class="swiper-slide">
-        <div class="item">
-            <img src="https://cdn-images-1.medium.com/max/800/0*X2LL7tyK_UjnOdTz.jpg" alt="">
-        </div>
-    </div>
-    <div class="swiper-slide">
-        <div class="item">
-            <img src="https://cdn-images-1.medium.com/max/600/0*uq-nAtibEoAQt8W9.jpg" alt="">
-        </div>
+    </section>
+
+
+    <!-- Start of footer -->
+    <!-- Start of Footer Buttons -->
+    <div class="footer">
+      <img src="img/footer.png" alt="">
+      <div class="boxRow">
+        <a class="button btn_v1" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a class="button btn_v2" href="https://www.youtube.com/watch?v=989-7xsRLR4&t=0m36s">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a class="button btn_v3" href="https://www.youtube.com/watch?v=072tU1tamd0">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+      <!-- End of Footer Buttons -->
+
+
+      <!-- Footer contact -->
+      <span class=footer-contact>
+        <p>
+          Copyright © 2021 TWINKO LTD. All rights reserved.<br>
+          TWINKO LTD., PART OF VMBC LTD., IS THE BRAINCHILD Of DAVID HSU, ESQ. <br>
+          THIS WEBSITE FOR DEMONSTRATION PURPOSES ONLY. NAMES, CHARACTERS, BUSINESSES, PLACES, EVENTS, LOCALES, AND
+          INCIDENTS ARE EITHER THE PRODUCTS OF THE AUTHOR'S IMAGINATION OR USED IN A FICTITIOUS MANNER. ANY RESEMBLANCE
+          TO ACTUAL PERSONS, LIVING OR DEAD, OR ACTUAL EVENTS IS PURELY COINCIDENTAL.
+        </p>
     </div>
   </div>
-<div class="swiper-pagination"></div>
-
-
-
-    <section class="avenue-messenger">
-      <div class="chat-menu">
-       <div class="items"><span>
-         <a href="#" title="Minimize">&mdash;</a><br>
-    <!--     
-         <a href="">enter email</a><br>
-         <a href="">email transcript</a><br>-->
-         <a href="#" title="End Chat">&#10005;</a>
-         
-         </span></div>
-        <div class="button">...</div>
-      </div>
-      <div class="agent-face">
-        <div class="half">
-         <img class="agent circle" src="img/chat/avatar-girl.png" alt="Jesse Tino"></div>
-      </div>
-    <div class="chat">
-      <div class="chat-title">
-        <h1>Jesse Tino</h1>
-        <h2>RE/MAX</h2>
-      <!--  <figure class="avatar">
-          <img src="http://askavenue.com/img/17.jpg" /></figure>-->
-      </div>
-      <div class="messages">
-        <div class="messages-content"></div>
-      </div>
-      <div class="message-box">
-        <textarea type="text" class="message-input" placeholder="Type message..."></textarea>
-        <button type="submit" class="message-submit">Send</button>
-      </div>
-    </div>
-  </div>
-    <!--<div class="bg"></div>-->
-    <!-- partial -->
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.concat.min.js'></script><script src="js/online-chat.js"></script>
-  </div>
 
 
 
 
-<!-- Start of footer -->
-  <div class="footer">
-    <img src="img/footer.png" alt="">
-  <div class="boxRow">
-    <a class="btn btn_v1" href="#">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-    <a class="btn btn_v2" href="#">
-      <i class="fab fa-instagram"></i>
-    </a>
-    <a class="btn btn_v3" href="#">
-      <i class="fab fa-youtube"></i>
-    </a>
-    
-  </div>
-    
+  <script src="js/online-chat.js"></script>
 
-<!-- Footer contact -->
-    <span class=footer-contact>
-    <p>
-      Copyright © 2021 TWINKO LTD. All rights reserved.<br>
-TWINKO LTD., PART OF VMBC LTD., IS THE BRAINCHILD Of DAVID HSU, ESQ. <br>
-THIS WEBSITE FOR DEMONSTRATION PURPOSES ONLY. NAMES, CHARACTERS, BUSINESSES, PLACES, EVENTS, LOCALES, AND INCIDENTS ARE EITHER THE PRODUCTS OF THE AUTHOR'S IMAGINATION OR USED IN A FICTITIOUS MANNER. ANY RESEMBLANCE TO ACTUAL PERSONS, LIVING OR DEAD, OR ACTUAL EVENTS IS PURELY COINCIDENTAL.
-    </p>
-  </div>
-</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script
+    src='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.concat.min.js'></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
+  <script src="js/chat-girl.js"></script>
 
- 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.concat.min.js'></script><script src="js/chat-girl.js"></script>
-
-
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
-
-<!-- partial -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script><script  src="js/chat-girl.js"></script>
+  <!-- Resize alert! LOL! -->
+  <!-- <script>
+    window.addEventListener("resize", function () {
+      alert("不要亂調Window喔，就跟你說我們還不會用RWD!!!");
+    });
+  </script> -->
 
 </body>
+
 </html>

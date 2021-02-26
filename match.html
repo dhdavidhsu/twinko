@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Import materialize.css
+  <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/> -->
+  <link rel="stylesheet" href="css/match.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+
+
+  <title>Event</title>
+  <!-- Need this for footer buttons -->
+  <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"
+    integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0"
+    crossorigin="anonymous"></script>
+  <!-- Font Awesome stuff -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Google Font for the page -->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,400" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- old nav starts -->
+    <div class="nav">
+      <ul>
+        <li class="menu-item"><a href="chat.html">即時聊天</a></li>
+        <li class="menu-item"><a href="event.html">主題約會</a></li>
+        <li class="menu-item"><a href="seminar.html">戀愛企劃</a></li>
+        <li class="menu-item"><a href="index.html"><img src="img/logo-nav.png" alt=""></a></li>
+        <li class="menu-item current-page"><a href="match.html">每日配對</a></li>
+        <li class="menu-item"><a href="personality.html">人格測驗</a></li>
+        <!-- <li class="menu-item"><a href="about-us.html">關於(舊)</a></li> -->
+        <li class="menu-item">
+          <div class="dropdown">
+            <button class="dropbtn">關於我們
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="about-us.html">關於我們</a>
+              <a href="testimonial.html">客戶見證</a>
+              <a href="#">聯絡我們</a>
+            </div>
+        </li>
+        <li class="user"><a href="#"><img src="img/user.png" alt=""></a></li>
+        <li class="user login"><a href="login.html">登入</a></li>
+      </ul>
+    </div>
+    <!-- old nav ends -->
+
+    <!-- Start of main hero image & the spotlight effect. -->
+    <div class="about-us-main">
+      <div class="block1">
+
+        <div class="spotlight"></div>
+
+      </div>
+      <!-- End of main hero image & the spotlight effect. -->
+
+      <h3>幸福，從今天開始</h3>
+      <h4>以下是你今天的四個免費配對</h4>
+      <div class="match-bg">
+        <div class="grid" id="app">
+
+          <header class="app-header">
+            <div class="controls">
+              <p id="clock"></p>
+              <ul>
+                <li>⭐TWINKO⭐</li>
+                <li>
+                  <bar-chart></bar-chart>
+                </li>
+                <li>
+                  <wi-fi></wi-fi>
+                </li>
+                <li>
+                  <battery></battery>
+                </li>
+              </ul>
+            </div>
+            <div class="subtitle">
+              <h3>免費配對</h3>
+              <arrow-left @close="closeProfile"></arrow-left>
+            </div>
+
+          </header>
+
+          <div class="matches">
+
+            <div class="full" v-if="openProfile">
+
+              <svg width="30" height="30" viewBox="0 0 30 30" class="full__mask">
+                <defs>
+                  <clipPath id="revealCircle">
+                    <circle id="circ" cx="0" cy="0" r="1" stroke="no-stroke" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+
+              <picture class="full__photo">
+                <img :src="`img/${ selectedProfile.photo }`" />
+              </picture>
+
+              <div class="full__match">
+                <heart></heart>
+                <p>{{ selectedProfile.match }}<span>%</span> Match!</p>
+              </div>
+              <h1 class="full__name">{{ selectedProfile.name }}</h1>
+              <p class="full__bio">{{ selectedProfile.bio }}</p>
+              <div class="full__menu">
+                <div class="option">
+                  <star></star>
+                </div>
+
+                <div class="option">
+                  <heart></heart>
+                </div>
+                <div class="option" @click="closeProfile">
+                  <cancel></cancel>
+                </div>
+                <div class="option">
+                  <zap></zap>
+                </div>
+
+              </div>
+            </div>
+
+            <profile-thumb v-for="thumb in thumbs" :id="thumb.id" :key="thumb.id" :name="thumb.name"
+              :active="thumb.active" :photo="thumb.photo" @open="openProfile = $event"
+              @show-profile="showProfile($event)">
+            </profile-thumb>
+
+          </div>
+          <footer class="app-footer">
+            <ul>
+              <li class="tab pay-up">
+                <search></search>
+                <p class="tab__text">Explore</p>
+              </li>
+              <li class="tab pay-up">
+                <heart></heart>
+                <p class="tab__text">Matches</p>
+              </li>
+              <li class="tab pay-up">
+                <chat></chat>
+                <p class="tab__text">Chat</p>
+              </li>
+              </a>
+              <li class="tab">
+                <a href="hidden.html">
+                  <user></user>
+                  <p class="tab__text">Profile</p>
+                </a>
+              </li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+
+      <!-- SVG ICONS -->
+
+      <!-- Bar Chart -->
+      <template id="bar-chart">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart">
+          <line x1="12" y1="20" x2="12" y2="10"></line>
+          <line x1="18" y1="20" x2="18" y2="4"></line>
+          <line x1="6" y1="20" x2="6" y2="16"></line>
+        </svg>
+      </template>
+
+      <!-- WiFi -->
+      <template id="wi-fi">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" class="feather feather-wifi">
+          <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+          <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+          <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+          <line x1="12" y1="20" x2="12.01" y2="20"></line>
+        </svg>
+      </template>
+
+      <!-- Battery -->
+      <template id="battery">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" class="feather feather-battery">
+          <rect x="1" y="6" width="18" height="12" rx="2" ry="2"></rect>
+          <line x1="23" y1="13" x2="23" y2="11"></line>
+        </svg>
+      </template>
+
+      <!-- Search -->
+      <template id="search">
+        <svg xmlns="http://www.w3.org/2000/svg" class="tab__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-search">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </template>
+
+      <!-- Heart -->
+      <template id="heart">
+        <svg xmlns="http://www.w3.org/2000/svg" class="tab__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-heart">
+          <path
+            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+        </svg>
+      </template>
+
+      <!-- Chat -->
+      <template id="chat">
+        <svg xmlns="http://www.w3.org/2000/svg" class="tab__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-message-square">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+      </template>
+
+      <!-- User -->
+      <template id="user">
+        <svg xmlns="http://www.w3.org/2000/svg" class="tab__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-user">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+      </template>
+
+      <!-- Star -->
+      <template id="star">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-star">
+          <polygon
+            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+          </polygon>
+        </svg>
+      </template>
+
+      <!-- Cancel -->
+      <template id="cancel">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-x">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </template>
+
+      <!-- Zap -->
+      <template id="zap">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-zap">
+          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+        </svg>
+      </template>
+
+      <!-- Arrow Left -->
+      <template id="arrow-left">
+        <svg @mousedown="$emit('open', false)" @click="$emit('close')" class="back_arrow"
+          xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-arrow-left">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </template>
+
+      <!-- Profile -->
+      <template id="profile-thumb">
+        <div class="profile" @mousedown="$emit('open', true)" @click="$emit('show-profile', thumbId)">
+          <picture class="profile__photo">
+            <img :src="photo" />
+          </picture>
+          <div class="profile__name">{{ name }}<small>{{ active }}</small></div>
+        </div>
+      </template>
+
+
+
+      <!-- Start of the end-of-page block -->
+      <div class="block11">
+        <h3>幸福，從今天開始</h3>
+        <div class="block11-content">
+          <h4>從此不再一個人...</h4>
+          <img src="img/block9j.png" alt="">
+          <a class="purple-btn" href="login.html">你的幸褔就從今天開始 GO!<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <!-- End of the end-of-page block -->
+
+
+      <!-- Start of footer -->
+      <!-- Start of Footer Buttons -->
+      <div class="footer">
+        <img src="img/footer.png" alt="">
+        <div class="boxRow">
+          <a class="button btn_v1" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a class="button btn_v2" href="https://www.youtube.com/watch?v=989-7xsRLR4&t=0m36s">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a class="button btn_v3" href="https://www.youtube.com/watch?v=072tU1tamd0">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+        <!-- End of Footer Buttons -->
+
+        <!-- Footer contact -->
+        <span class=footer-contact>
+          <p>
+            Copyright © 2021 TWINKO LTD. All rights reserved.<br>
+            TWINKO LTD., PART OF VMBC LTD., IS THE BRAINCHILD Of DAVID HSU, ESQ. <br>
+            THIS WEBSITE FOR DEMONSTRATION PURPOSES ONLY. NAMES, CHARACTERS, BUSINESSES, PLACES, EVENTS, LOCALES, AND
+            INCIDENTS ARE EITHER THE PRODUCTS OF THE AUTHOR'S IMAGINATION OR USED IN A FICTITIOUS MANNER. ANY
+            RESEMBLANCE TO ACTUAL PERSONS, LIVING OR DEAD, OR ACTUAL EVENTS IS PURELY COINCIDENTAL.
+          </p>
+      </div>
+    </div>
+
+
+    <!-- Scroll button -->
+    <button onclick="topFunction()" id="scrollbtn" title="Go to top"><img src="img/top.png" alt=""></button>
+
+    <script>
+      //Get the button
+      var mybutton = document.getElementById("scrollbtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () { scrollFunction() };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+
+
+    <!-- Resize alert! LOL! -->
+    <!-- <script>
+      window.addEventListener("resize", function () {
+        alert("不要亂調Window喔，就跟你說我們還不會用RWD!!!");
+      });
+    </script> -->
+
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js'></script>
+    <script src="js/match.js"></script>
+
+    <!-- Current time -->
+    <script>
+      var myVar = setInterval(myTimer, 1000);
+
+      function myTimer() {
+        var d = new Date();
+        document.getElementById("clock").innerHTML = d.toLocaleTimeString();
+      }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+      crossorigin="anonymous"></script>
+    <script src="js/pay-up.js"></script>
+
+    <script type="text/x-ecmascript">
+  $('.pay-up').click(function() {
+    $.push(
+      'Error!',
+      '免費會員不能執行此功能。請先課金!!!', 'img/warning.png');
+  });
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,351 @@
+*{
+  /* outline: 1px solid pink; */
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  
+    font-family: "Roboto", "Helvetica", sans-serif;
+  
+    transition: background-color 0.2s;
+    will-change: background-color;
+  }
+
+.about-us-main {
+	/* grid-area: main;  */
+	background-image: url(../img/match-bg1.png);
+	background-repeat: no-repeat;
+}	
+
+
+.spotlight {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: radial-gradient(
+      circle,
+      transparent 160px,
+      rgba(0, 0, 0, 0.85) 200px
+  );
+}
+
+/* Start of the matching app */
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Nunito", sans-serif;
+  color: #424242;
+  background: #383838;
+  background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png"), radial-gradient(circle, #464646 20%, #212121 100%);
+}
+
+
+
+.match-bg {
+  padding: 80px;
+  position: relative;
+  width: 100%;
+  height: 1200px;
+  transition: background 1s;
+  width: calc(100% + 100vw - 1210px);
+  right: calc(50vw - 600px);
+  background-image: url(../img/abstract4.png);
+  background-position: center;
+  background-size: cover;
+
+}
+
+.grid {
+  margin: 0 auto;
+  display: grid;
+  width: 460px;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr min-content;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+  background-color: #f9f9f9;
+  background-image: linear-gradient(
+180deg
+, #ffffff 0%, #f7f7f7 65%, #e4e4e4 100%);
+box-shadow: rgb(143 136 136) 7px 10px 20px 5px;
+}
+
+.grid img {
+  width: 100%;
+}
+
+.app-header {
+  padding: 1.3em;
+}
+
+.app-header, .subtitle{
+  background-color: #8B81C3;
+}
+
+.app-header .subtitle {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(../img/logo-nav.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 0;
+}
+.app-header .subtitle h3 {
+  color: white;
+  font-size: 1.6rem;
+}
+.app-header .subtitle svg {
+  cursor: pointer;
+}
+
+.controls {
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 65%;
+  margin-bottom: 1em;
+}
+.controls ul {
+  display: flex;
+}
+.controls ul li {
+  width: 100%;
+  text-align: right;
+  text-transform: uppercase;
+}
+.controls ul li svg {
+  width: 18px;
+}
+
+.matches {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 1em;
+  padding: 1.3em;
+  position: relative;
+}
+
+.full {
+  position: absolute;
+  top: 0;
+  left: 1.3em;
+  padding: 1.3em;
+  width: 420px;
+  height: 98%;
+  background: #f9f9f9;
+  border-radius: 12px;
+  z-index: 5;
+  clip-path: url("#revealCircle");
+}
+.full__mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.full__photo {
+  display: block;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.full__match {
+  position: relative;
+  left: 50%;
+  top: -15px;
+  transform: translateX(-50%);
+  width: 44%;
+  padding: 5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 500px;
+  color: #f9f9f9;
+  background-image: linear-gradient(90deg, #ff3d97 65%, #ff1c82 100%);
+}
+.full__match span {
+  font-size: 0.9rem;
+}
+.full__match svg {
+  fill: #f9f9f9;
+  stroke: none;
+  width: 18px;
+}
+.full__match p {
+  padding: 0 7px;
+  font-size: 1.1rem;
+}
+.full__name {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+.full__bio {
+  padding: 1em;
+  text-align: center;
+  color: #8f8f8f;
+}
+.full__menu {
+  width: 70%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  padding: 5px 10px;
+}
+.full__menu .option {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: relative;
+  background: #f9f9f9;
+  z-index: 2;
+  box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.full__menu .option:nth-child(1) {
+  width: 37px;
+  height: 37px;
+}
+.full__menu .option:nth-child(1) svg {
+  width: 18px;
+  stroke: #f4dc00;
+  fill: #f7f700;
+}
+.full__menu .option:nth-child(2) svg {
+  width: 30px;
+  stroke: none;
+  fill: #ff1485;
+}
+.full__menu .option:nth-child(3) svg {
+  width: 30px;
+  stroke: #424242;
+}
+.full__menu .option:nth-child(4) {
+  width: 37px;
+  height: 37px;
+}
+.full__menu .option:nth-child(4) svg {
+  width: 18px;
+  fill: #dc32ff;
+  stroke: #c700f4;
+}
+.full__menu .option:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.3);
+}
+.profile {
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #f9f9f9;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.profile__photo {
+  display: block;
+  height: 240px;
+  object-fit: cover;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  overflow: hidden;
+}
+.profile__photo img {
+  height: 100%;
+}
+.profile__name {
+  padding: 14px 0;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.profile__name small {
+  display: block;
+  color: #8f8f8f;
+  font-size: 0.8rem;
+}
+.profile:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.app-footer {
+  background: #ffffff;
+}
+
+.app-footer a{
+  text-decoration: none;
+  color:#424242;
+
+}
+
+.app-footer a:hover{
+  text-decoration: none;
+  color:#ff1485;
+
+}
+
+
+
+.app-footer ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(24%, 1fr));
+  justify-items: center;
+}
+
+.tab {
+  width: 100%;
+  text-align: center;
+  padding: 24px 10px;
+  transition: 0.3s;
+  cursor: pointer;
+  border-top: 3px solid transparent;
+}
+.tab__icon {
+  width: 20px;
+}
+.tab__text {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.tab:nth-child(2) {
+  border-top: 3px solid #ff1485;
+  background: whitesmoke;
+  pointer-events: none;
+}
+.tab:nth-child(2) svg {
+  stroke: #ff1485;
+}
+.tab:hover {
+  border-color: #ff1485;
+}
+.tab:hover svg {
+  stroke: #ff1485;
+}
+
+@media (max-width: 460px) {
+  .grid {
+    height: 100%;
+  }
+}

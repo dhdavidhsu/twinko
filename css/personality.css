@@ -1,0 +1,172 @@
+*{
+  /* outline: 1px solid pink; */
+}
+
+
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  
+    font-family: "Roboto", "Helvetica", sans-serif;
+  
+    transition: background-color 0.2s;
+    will-change: background-color;
+    box-sizing: border-box;
+  }
+
+.personality-main {
+	/* grid-area: main;  */
+	background-image: url(../img/personality/personality-bg2.png);
+	background-repeat: no-repeat;
+}	
+
+.test-container {
+  /* background: url("https://images.unsplash.com/photo-1533020897307-5f057b2370ae?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=b642a180fb767bd86ebf1d5863ccb844"); */
+background-repeat: no-repeat;
+background-size: 100%;
+display: grid;
+grid-gap: 50px;
+grid-template-columns: 100%;
+color: #eee;
+padding: 30px;
+color: darkgray;
+text-align: left;
+}
+
+#description {
+background-color: rgba(255, 255, 255, 0.8);
+padding: 45px;
+border-top: 7px solid slategray;
+border-bottom:  7px solid slategray;
+color: slategray;
+}
+
+.title{
+background-color: rgba(255, 255, 255, 0.8);
+text-align: left;
+padding: 20px;
+color: slategray;  
+/* To make the box even with footer width */
+margin: -30px;  
+}
+
+.results{
+  background-color: rgba(255, 255, 255, 0.8);
+text-align: center;
+padding: 20px;
+color: slategray; 
+font-size: 1.2em;
+}
+
+#moreInfo,#refLinks{ 
+/* padding: 13px;  */
+float: right;
+}
+
+#submit{
+  margin-top: 30px;
+  width: 15%;
+  border-radius: 5px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: start;
+  border-radius: 8px;
+  box-shadow: 0 3px 5px rgb(0 0 0 / 18%);
+  padding: 0.25em 0.75em;
+  min-width: 10ch;
+  min-height: 44px;
+  text-align: center;
+  line-height: 1.1;
+  transition: 235ms all ease-in-out;
+  background-color: #8B81C3;
+  color: #ffffff;
+}
+
+#submit:hover {
+  background-color: #6154a0;
+  /* width: 250px; */
+  color:rgb(255, 255, 255);
+}
+
+#submit:active{
+  /* color: red; */
+  color:  #EE62B3;
+}
+
+.results h3{
+  font-size: 40px;
+}
+
+#res{
+  font-size: 45px;
+  margin: 30px;
+  color: rebeccapurple;
+}
+
+#info h3{
+  font-size: 40px;
+}
+
+#info p{
+  margin: 0 auto;
+  width: 60%;
+  line-height: 1.3;
+}
+
+#overzicht{
+  margin: 0 auto;
+  width: 60%;
+  line-height: 1.3;
+}
+
+/* li, h3{
+text-align: left;
+} */
+
+.results{
+padding: 9px 45px;
+}
+#waarden{
+text-align:center;
+}
+
+#radioBtn .notActive{
+color: slategray;
+background-color: #fff;
+}
+
+body .btn {
+	/* style*/
+
+  text-decoration: none;
+  color: #fff;
+  background-color: #26a69a;
+  text-align: center;
+  letter-spacing: .5px;
+  -webkit-transition: background-color .2s ease-out;
+  transition: background-color .2s ease-out;
+  cursor: pointer;
+  font-size: 14px;
+    outline: 0;
+
+    border: none;
+    border-radius: 2px;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 16px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  label{
+    font-size: 1.5em;
+    /* margin: 50px;
+    padding: 50px; */
+  }
