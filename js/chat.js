@@ -8,9 +8,9 @@
   ];
 
   var BODY_IMAGE = [
-    "url(./img/abstract6m.png)",
-    "url(./img/abstract8d.png)",
-    "url(./img/abstract7e.png)"
+    "url(img/abstract6m.png)",
+    "url(img/abstract8d.png)",
+    "url(img/abstract7e.png)"
   ];
 
   function Slider() {
